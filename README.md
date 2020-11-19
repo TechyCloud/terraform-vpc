@@ -21,9 +21,9 @@ You can download terraform code [here](https://github.com/TechyCloud/terraform-v
 Once downloaded you can update the below vaiables in main.tf file. 
 
 ```
-VPC_Name = ### "Test-VPC"
-VPC_CIDR_block = ###"10.20.0.0/16"
-Environment_Name = ###"DEV"
+VPC_Name = ###### "Test-VPC"
+VPC_CIDR_block = ###### "10.20.0.0/16"
+Environment_Name = ###### "DEV"
 IGW_Name = ###"Test-IGW"
 Public_RouteTable_Name = ###"Public-RT"
 Private_RouteTable_Name = ###"Private-RT"
