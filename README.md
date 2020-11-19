@@ -20,7 +20,7 @@ You can download terraform code [here](https://github.com/TechyCloud/terraform-v
 
 Once downloaded you can update the below vaiables in main.tf file. 
 
-'''
+```
 VPC_Name = ###"Test-VPC"
 VPC_CIDR_block = ###"10.20.0.0/16"
 Environment_Name = ###"DEV"
@@ -31,4 +31,4 @@ public_subnets_cidr = ###["10.20.1.0/24", "10.20.2.0/24"]
 public_subnets_Zone = ###["ap-south-1a", "ap-south-1a"]
 private_subnets_cidr = ###["10.20.3.0/24", "10.20.4.0/24"]
 private_subnets_Zone = ###["ap-south-1b", "ap-south-1b"]
-'''
+```
