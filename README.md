@@ -4,7 +4,7 @@ Terraform is an Infrastructure as a Code product. In this article, we are going 
 
 ## Prerequisites
 - Terraform v0.13.5
-- AWS CLI Instlled
+- AWS CLI
 - IAM Access Key & Secret Key
 
 **This module will launching the below resources as per given veriables in the AWS console.**
