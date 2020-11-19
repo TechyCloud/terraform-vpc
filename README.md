@@ -6,3 +6,14 @@ Terraform is an Infrastructure as a Code product. In this article, we are going 
 - Terraform v0.13.5
 - AWS CLI Instlled
 - IAM Access Key & Secret Key
+
+This module will launching the below resources as per given veriables in the AWS console.
+- VPC
+- Public Subnet
+- Private Subnet
+- Route Tables with association
+- Internet Gateway
+- Nat Gateway with EIP
+
+## Usage
+You can download the terraform code from [here](https://github.com/TechyCloud/terraform-vpc.git) 
