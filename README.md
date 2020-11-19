@@ -7,7 +7,7 @@ Terraform is an Infrastructure as a Code product. In this article, we are going 
 - AWS CLI Instlled
 - IAM Access Key & Secret Key
 
-###### This module will launching the below resources as per given veriables in the AWS console.
+**This module will launching the below resources as per given veriables in the AWS console.**
 - VPC
 - Public Subnet
 - Private Subnet
@@ -20,11 +20,12 @@ You can download terraform code [here](https://github.com/TechyCloud/terraform-v
 
 Once downloaded you can update the below vaiables in main.tf file. If you want to add more then two subnets either public or private subnets you can add subnet **CIDR range** like below on respective variables. 
 
-**Public Sunet CIDR**
+###### Public Sunet CIDR
 > public_subnets_cidr = ["10.20.1.0/24", "10.20.2.0/24", "10.20.3.0/24"]
 
-**Private Subnet CIDR**
+###### Private Subnet CIDR
 > private_subnets_cidr = ["10.20.5.0/24", "10.20.6.0/24", 10.20.7.0/24]
+
 
 Like wise, You can add the **availability zone** in the both(Public & Private) vaiables.
 
@@ -49,10 +50,10 @@ You can run the below command to initialize the configuration before goint to ap
 
 > terraform init
 
-Once succeed the above command, You can run the below apply command to launch the resouces in console. 
-
-For this step, Please keep it ready IAM user access and secret key to apply the changes.   
+Once succeed the above command, You can run the below apply command to launch the resouces in console. For this step, Please keep it ready IAM user access and secret key to apply the changes.   
 
 > terraform apply
 
+!! Once the command is succeed, You have successfully setup the VPC environment with terraform. 
 
+## Thanks for using this Block!!
