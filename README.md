@@ -54,6 +54,7 @@ Once succeed the above command, You can run the below apply command to launch th
 
 > terraform apply
 
-!! Once the command is succeed, You have successfully setup the VPC environment with terraform. 
 
-## Thanks for using this Block!!
+**!! Once the command is succeed, You have successfully setup the VPC environment with terraform.**
+
+###### Thanks for using this Block!!
