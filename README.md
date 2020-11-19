@@ -18,7 +18,7 @@ Terraform is an Infrastructure as a Code product. In this article, we are going 
 ## Usage
 You can download terraform code [here](https://github.com/TechyCloud/terraform-vpc/archive/main.zip) to setup the VPC with public & private subnets.
 
-Once downloaded you can update the below vaiables in main.tf file. If you want to add more then two subnets either public or private subnets you can add subnet **CIDR range** like below on respective variables. 
+Once downloaded you can update the below vaiables in **main.tf** file. If you want to add more then two subnets either public or private subnets you can add subnet **CIDR range** like below on respective variables. 
 
 ###### Public Sunet CIDR
 > public_subnets_cidr = ["10.20.1.0/24", "10.20.2.0/24", "10.20.3.0/24"]
