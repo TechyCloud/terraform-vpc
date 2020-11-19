@@ -46,7 +46,7 @@ private_subnets_Zone = ["ap-south-1b", "ap-south-1b"]
 ```
 The code is ready to launch the resources after updating the variabls in **main.tf** file. 
 
-You can run the below command to initialize the configuration before goint to apply the changes in **tf_vpc** directory.
+You can run the below command to initialize the configuration before going to apply the changes in **tf_vpc** directory.
 
 > terraform init
 
