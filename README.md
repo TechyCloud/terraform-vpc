@@ -27,7 +27,7 @@ Once downloaded you can update the below vaiables in main.tf file. If you want t
 > private_subnets_cidr = ["10.20.5.0/24", "10.20.6.0/24", 10.20.7.0/24]
 
 
-Like wise, You can add the **availability zone** in the both(Public & Private) vaiables.
+Like wise, You can add the **availability zone** in the both(Public & Private) variables.
 
 > public_subnets_Zone = ["ap-south-1a", "ap-south-1a", "ap-south-1b"]
 
