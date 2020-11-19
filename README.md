@@ -18,9 +18,15 @@ This module will launching the below resources as per given veriables in the AWS
 ## Usage
 You can download terraform code [here](https://github.com/TechyCloud/terraform-vpc/archive/main.zip) to setup the VPC with public & private subnets.
 
-Once downloaded you can update the below vaiables in main.tf file. If you want to add more then two subnets either public or private subnets you can add subnet CIDR range in like below on respective variables. 
+Once downloaded you can update the below vaiables in main.tf file. If you want to add more then two subnets either public or private subnets you can add subnet **CIDR range** like below on respective variables. 
 
 > public_subnets_cidr = ["10.20.1.0/24", "10.20.2.0/24", "10.20.3.0/24"]
+> private_subnets_cidr = ["10.20.5.0/24", "10.20.6.0/24", 10.20.7.0/24]
+
+Like wise, You can add the **availability zone** in the both(Public & Private) vaiables.
+
+> public_subnets_Zone = ["ap-south-1a", "ap-south-1a", "ap-south-1b"]
+
 
 ```
 VPC_Name =  "Test-VPC"
@@ -34,3 +40,14 @@ public_subnets_Zone = ["ap-south-1a", "ap-south-1a"]
 private_subnets_cidr = ["10.20.5.0/24", "10.20.6.0/24"]
 private_subnets_Zone = ["ap-south-1b", "ap-south-1b"]
 ```
+The code is ready to launch the resources after updating the variabls in **main.tf** file. 
+
+You can run the below command to initialize the configuration before goint to apply the changes in **tf_vpc** directory.
+
+> terraform init
+
+Once succeed the above command you can run the apply command to launch the resouces in console. For this step, Please keep it ready IAM user access and secret key to apply the changes.   
+
+> terraform apply
+
+
