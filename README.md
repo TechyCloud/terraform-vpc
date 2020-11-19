@@ -18,7 +18,9 @@ This module will launching the below resources as per given veriables in the AWS
 ## Usage
 You can download terraform code [here](https://github.com/TechyCloud/terraform-vpc/archive/main.zip) to setup the VPC with public & private subnets.
 
-Once downloaded you can update the below vaiables in main.tf file. 
+Once downloaded you can update the below vaiables in main.tf file. If you want to add more then two subnets either public or private subnets you can add subnet CIDR range in like below on respective variables. 
+
+> public_subnets_cidr = ["10.20.1.0/24", "10.20.2.0/24", "10.20.3.0/24"]
 
 ```
 VPC_Name =  "Test-VPC"
@@ -29,6 +31,6 @@ Public_RouteTable_Name = "Public-RT"
 Private_RouteTable_Name = "Private-RT"
 public_subnets_cidr = ["10.20.1.0/24", "10.20.2.0/24"]
 public_subnets_Zone = ["ap-south-1a", "ap-south-1a"]
-private_subnets_cidr = ["10.20.3.0/24", "10.20.4.0/24"]
+private_subnets_cidr = ["10.20.5.0/24", "10.20.6.0/24"]
 private_subnets_Zone = ["ap-south-1b", "ap-south-1b"]
 ```
