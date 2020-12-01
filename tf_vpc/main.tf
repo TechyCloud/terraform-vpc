@@ -2,14 +2,17 @@
 
 module "module-vpc_creation" {
 source = "../modules/module-vpc_creation/"
-VPC_Name = "Eig-Test"
-VPC_CIDR_block = "10.20.0.0/16"
-Environment_Name = "Staging"
-IGW_Name = "Eig-Test"
-Public_RouteTable_Name = "Eig-Public-RT"
-Private_RouteTable_Name = "Eig-Private-RT"
-public_subnets_cidr = ["10.20.1.0/24", "10.20.2.0/24"]
-public_subnets_Zone = ["ap-south-1a", "ap-south-1a"]
-private_subnets_cidr = ["10.20.3.0/24", "10.20.4.0/24"]
-private_subnets_Zone = ["ap-south-1b", "ap-south-1b"]
+
+VPC_Name = "NonProd-VPC"
+VPC_CIDR_block = "192.168.0.0/16"
+Environment_Name = "UAT"
+IGW_Name = "eigenrisk-internet-gateway"
+Public_RouteTable_Name = "eigenrisk-route-table-IG-attached"
+Private_RouteTable_Name = "eigenrisk-private-RT"
+public_subnets_cidr = ["192.168.1.0/26", "192.168.2.0/26"]
+public_subnets_Zone = ["us-east-1a", "us-east-1b"]
+private_subnets_cidr = ["192.168.5.0/26", "192.168.6.0/26", "192.168.7.0/26", "192.168.8.0/26", "192.168.10.0/26", "192.168.11.0/26"]
+private_subnets_Zone = ["us-east-1c", "us-east-1c", "us-east-1d", "us-east-1d", "us-east-1e", "us-east-1f"]
+public_subnets_name = ["NonProd-Public-01", "NonProd-Public-02"]
+private_subnets_name = ["NonProd-APP-01", "NonProd-APP-02", "NonProd-APP-03", "NonProd-APP-04", "NonProd-DB-01", "NonProd-DB-02"]
 }
