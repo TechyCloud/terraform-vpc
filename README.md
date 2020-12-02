@@ -57,7 +57,7 @@ private_subnets_name = ["NonProd-APP-01", "NonProd-APP-02"]
 ```
 The code is ready to launch the resources after updating the variabls in **main.tf** file. 
 
-You can run the below command to initialize the configuration before going to apply the changes in **tf_vpc** directory.
+You can run the below command in **tf_vpc** directory to initialize the configuration before going to apply the changes.
 
 > terraform init
 
