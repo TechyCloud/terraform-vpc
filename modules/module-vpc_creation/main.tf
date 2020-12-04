@@ -1,10 +1,41 @@
+#Creating Security Groups
+resource "aws_security_group" "sg" {
+  count = "${length(var.sg_name)}"
+  name        = "${element(var.sg_name,count.index)}"
+  description = "Security Groups"
+  vpc_id      = "${aws_vpc.VPC_ID.id}"
+  tags = {
+    Name = "${element(var.sg_name,count.index)}"
+  }
+}
+
 #Creating VPC
 resource "aws_vpc" "VPC_ID" {
  cidr_block = var.VPC_CIDR_block
+ enable_dns_hostnames = true
  tags = {
    Name = var.VPC_Name
    Environment = var.Environment_Name
  }
+}
+
+#Create VPC Peering
+resource "aws_vpc_peering_connection" "VPC-Peering" {
+  peer_vpc_id   = var.peer_accepter_vpc_id
+  vpc_id        = "${aws_vpc.VPC_ID.id}"
+  auto_accept   = true
+
+  tags = {
+    Name = var.VPC_Peering_Name
+  }
+
+  accepter {
+    allow_remote_vpc_dns_resolution = true
+  }
+
+  requester {
+    allow_remote_vpc_dns_resolution = true
+  }
 }
 
 #Creating Public Subnets
@@ -88,3 +119,16 @@ resource "aws_route_table_association" "Private_Subnet_Association" {
   route_table_id = "${aws_route_table.private-rt.id}"
 }
 
+#Adding Peering ID to Route Table
+resource "aws_route" "peer_id" {
+  route_table_id            = "${aws_default_route_table.Route-table-IG-attached.id}"
+  destination_cidr_block    = var.VPC_Accepter_CIDR
+  vpc_peering_connection_id = "${aws_vpc_peering_connection.VPC-Peering.id}"
+}
+
+#Adding Peering ID to Private Route Table
+resource "aws_route" "private_peer_id" {
+  route_table_id            = "${aws_route_table.private-rt.id}"
+  destination_cidr_block    = var.VPC_Accepter_CIDR
+  vpc_peering_connection_id = "${aws_vpc_peering_connection.VPC-Peering.id}"
+}
