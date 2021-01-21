@@ -22,7 +22,6 @@ Please followup [here](https://docs.aws.amazon.com/cli/latest/userguide/install-
 - Route Tables with association
 - Internet Gateway
 - Nat Gateway with EIP
-- VPC Peering
 - Security Groups
 
 ## Usage
@@ -60,9 +59,6 @@ private_subnets_cidr = ["10.20.5.0/24", "10.20.6.0/24"]
 private_subnets_Zone = ["ap-south-1b", "ap-south-1b"]
 public_subnets_name = ["NonProd-Public-01", "NonProd-Public-02"]
 private_subnets_name = ["NonProd-APP-01", "NonProd-APP-02"]
-peer_accepter_vpc_id = "vpc-5e6a####"
-VPC_Peering_Name = "Peering-Defauld-PerProd"
-VPC_Accepter_CIDR = "172.31.0.0/16"
 sg_name = ["Eig-SG", "PCI-SG"]
 ```
 The code is ready to launch the resources after updating the variabls in **main.tf** file. 
