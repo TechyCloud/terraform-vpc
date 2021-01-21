@@ -10,10 +10,6 @@ output "private" {
   value       = "${aws_subnet.private.*.id}"
   description = "The ID of the Private Subnets"
 }
-output "VPC-Peering" {
-  value = "${aws_vpc_peering_connection.VPC-Peering.id}"
-  description = "VPC Peering ID"
-}
 output "IGW" {
   value = "${aws_internet_gateway.IGW.id}"
   description = "Internet Gateway ID"

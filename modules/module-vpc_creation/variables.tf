@@ -37,12 +37,3 @@ variable "private_subnets_name" {
 variable "sg_name" {
   type = "list"
 }
-variable "peer_accepter_vpc_id" {
-  type = string
-}
-variable "VPC_Peering_Name" {
-  type = string
-}
-variable "VPC_Accepter_CIDR" {
-  type = string
-}
